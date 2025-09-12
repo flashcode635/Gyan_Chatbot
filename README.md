@@ -81,11 +81,12 @@ bash
 streamlit run main_app.py
 
 
-
+((image alt)(https://github.com/rishi991072/Gyan_Chatbot/blob/04f23387204caf8f143e3b1718296bfae7e9963d/Screenshot%20(23).png))
 
 
 
 **Advanced Features**
+
 Chat History: Access previous conversations from the sidebar
 
 Document Management: View, manage, and delete uploaded files
