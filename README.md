@@ -77,11 +77,11 @@ CHROMA_DB=your_chromadb_database_name
 
 4.Launch the application
 
-bash
 streamlit run main_app.py
 
+**Architecture Overview**
 
-((image alt)(https://github.com/rishi991072/Gyan_Chatbot/blob/04f23387204caf8f143e3b1718296bfae7e9963d/Screenshot%20(23).png))
+![image alt](https://github.com/rishi991072/Gyan_Chatbot/blob/04f23387204caf8f143e3b1718296bfae7e9963d/Screenshot%20(23).png)
 
 
 
@@ -126,6 +126,9 @@ Session Persistence: Your data remains available across sessions
 3.MongoDB Atlas: For cloud-based data storage
 
 4.ChromaDB: For vector storage and similarity search
+
+**UI Images**
+![image alt]()
 
 
 
