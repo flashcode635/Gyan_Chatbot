@@ -128,6 +128,8 @@ Session Persistence: Your data remains available across sessions
 4.ChromaDB: For vector storage and similarity search
 
 **UI Images**
+![image alt](https://github.com/rishi991072/Gyan_Chatbot/blob/1dd486878a985bedc30e5efca367e451b41fcb59/Screenshot%20(18).png)
+
 ![image alt]()
 
 
