@@ -18,7 +18,7 @@ Gyan Chatbot is an advanced AI-powered document assistant that enables users to 
 
 6:- Modern UI/UX: Custom-designed Streamlit interface with responsive layout
 
-**gyan-chatbot/**
+**gyan-chatbot/Folder structure**
 
 ├── main_app.py             # Primary application controller
 
