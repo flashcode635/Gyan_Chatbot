@@ -39,43 +39,39 @@ Gyan Chatbot is an advanced AI-powered document assistant that enables users to 
 
 **Installation Guide**
 
-Prerequisites
+1.Prerequisites
 
-Python 3.8 or higher
+2.Python 3.8 or higher
 
-MongoDB Atlas account or local MongoDB instance
+3.MongoDB Atlas account or local MongoDB instance
 
-AI21 Studio API key
+4.AI21 Studio API key
 
-Step-by-Step Setup
+**Step-by-Step Setup**
 
-1.Clone the repository
 
-git clone https://github.com/your-username/gyan-chatbot.git
-cd gyan-chatbot
+**1.Install required dependencies**
 
-2.Install required dependencies
 
-bash
 pip install -r requirements.txt
 
-3.Configure environment variables
+**2.Configure environment variables**
 
 Create a .env file with the following variables:
 
 env
 
-API_KEY=your_ai21_api_key_here
+1.API_KEY=your_ai21_api_key_here
 
-MONGO_URI=your_mongodb_connection_string
+2.MONGO_URI=your_mongodb_connection_string
 
-CHROMA_API_KEY=your_chromadb_api_key
+3.CHROMA_API_KEY=your_chromadb_api_key
 
-CHROMA_TENANT=your_chromadb_tenant
+4.CHROMA_TENANT=your_chromadb_tenant
 
-CHROMA_DB=your_chromadb_database_name
+5.CHROMA_DB=your_chromadb_database_name
 
-4.Launch the application
+**3.Launch the application**
 
 streamlit run main_app.py
 
@@ -87,16 +83,18 @@ streamlit run main_app.py
 
 **Advanced Features**
 
-Chat History: Access previous conversations from the sidebar
+1.Chat History: Access previous conversations from the sidebar
 
-Document Management: View, manage, and delete uploaded files
+2.Document Management: View, manage, and delete uploaded files
 
-Mode Switching: Seamlessly transition between global and local modes
+3.Mode Switching: Seamlessly transition between global and local modes
 
-Session Persistence: Your data remains available across sessions
+4.Session Persistence: Your data remains available across sessions
 
 **Technical Implementation****
+
 **Core Technologies**
+
 1.AI21 Studio Jamba Model: Advanced language processing capabilities
 
 2.Streamlit Framework: Responsive web application interface
@@ -128,9 +126,12 @@ Session Persistence: Your data remains available across sessions
 4.ChromaDB: For vector storage and similarity search
 
 **UI Images**
+
 ![image alt](https://github.com/rishi991072/Gyan_Chatbot/blob/1dd486878a985bedc30e5efca367e451b41fcb59/Screenshot%20(18).png)
 
-![image alt]()
+![image alt](https://github.com/rishi991072/Gyan_Chatbot/blob/f83be4935517df16195edc6fb095f44364a2f28b/Screenshot%20(22).png)
+
+**Gyan Chatbot - Transforming document interaction through AI intelligence. 🚀**
 
 
 
