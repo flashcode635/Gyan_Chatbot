@@ -1,113 +1,89 @@
-**Gyan Chatbot - AI-Powered Document Intelligence Platform**
+# 🚀 Vigyan Chatbot - AI-Powered Document Intelligence Platform
 
-**Project Overview**
+<div align="center">
+  <img src="https://img.shields.io/badge/Python-3.8+-blue?logo=python&logoColor=white" alt="Python 3.8+">
+  <img src="https://img.shields.io/badge/Streamlit-FF4B4B?style=flat&logo=Streamlit&logoColor=white" alt="Streamlit">
+  <img src="https://img.shields.io/badge/MongoDB-4EA94B?style=flat&logo=mongodb&logoColor=white" alt="MongoDB">
+  <img src="https://img.shields.io/badge/License-MIT-yellow.svg" alt="License">
+</div>
 
-Gyan Chatbot is an advanced AI-powered document assistant that enables users to interact with their documents through natural language conversations. The platform combines cutting-edge AI capabilities with robust document processing to deliver intelligent responses based on both general knowledge and specific document content. 
+## 📋 Project Overview
 
-**Key Features**
+Vigyan Chatbot is an advanced AI-powered document assistant that enables natural language interactions with your documents. The platform combines cutting-edge AI with robust document processing to deliver intelligent, context-aware responses.
 
-1:- Dual Chat Modes: Switch between global knowledge and document-specific conversations
+## ✨ Key Features
 
-2:- Multi-Format Document Support: Process TXT, PDF, DOCX, JSON, and XLSX files
+- **🤖 Dual Chat Modes** - Seamlessly switch between global knowledge and document-specific conversations
+- **📄 Multi-Format Support** - Process TXT, PDF, DOCX, JSON, and XLSX files with ease
+- **🔍 Semantic Search** - AI-powered document querying using advanced vector embeddings
+- **🔒 Secure Authentication** - Robust user registration and login system with MongoDB storage
+- **🔄 Persistent History** - Complete conversation history maintained across sessions
+- **🎨 Modern UI/UX** - Clean, responsive interface built with Streamlit
 
-3:- Intelligent Semantic Search: AI-powered document querying using vector embeddings
+## 📁 Project Structure
 
-4:- Secure Authentication System: User registration and login with MongoDB storage
-
-5:- Persistent Chat History: Complete conversation history maintained across sessions
-
-6:- Modern UI/UX: Custom-designed Streamlit interface with responsive layout
-
-**gyan-chatbot/Folder structure**
-
+```
+Vigyan-chatbot/
 ├── main_app.py             # Primary application controller
-
 ├── auth.py                 # User authentication management
-
 ├── database.py             # Database operations & vector storage
-
 ├── file_processing.py      # Multi-format document processing
-
 ├── utils.py                # Utilities & UI customization
-
 ├── .env                    # Environment configuration
-
 ├── requirements.txt        # Dependency management
-
 └── script_python_2         # Main script file
+```
 
+## 🚀 Getting Started
 
-**Installation Guide**
+### Prerequisites
 
-1.Prerequisites
+- Python 3.8 or higher
+- MongoDB Atlas account or local MongoDB instance
+- AI21 Studio API key
 
-2.Python 3.8 or higher
+### Installation
 
-3.MongoDB Atlas account or local MongoDB instance
+1. **Install Dependencies**
+   ```bash
+   pip install -r requirements.txt
+   ```
 
-4.AI21 Studio API key
+2. **Configure Environment**
+   - Copy `.env.sample` to `.env`
+   - Update with your API keys and configuration
 
-**Step-by-Step Setup**
+3. **Launch Application**
+   ```bash
+   streamlit run main_app.py
+   # If the above doesn't work, try:
+   # python -m streamlit run main_app.py
+   ```
 
+## 🏗️ Architecture Overview
 
-**1.Install required dependencies**
+![Architecture Diagram](https://github.com/rishi991072/Vigyan_Chatbot/blob/04f23387204caf8f143e3b1718296bfae7e9963d/Screenshot%20(23).png)
 
+## ⚡ Advanced Features
 
-pip install -r requirements.txt
+- **🗂️ Document Management** - Upload, view, and manage your documents
+- **🔄 Session Persistence** - Your data remains available across sessions
+- **🌐 Mode Switching** - Toggle between global and document-specific modes
+- **📊 Chat Analytics** - Track and analyze your conversation history
 
-**2.Configure environment variables**
+## 🛠️ Technical Stack
 
-Create a .env file with the following variables:
+### Core Technologies
 
-env
+- **🤖 AI21 Studio Jamba Model** - Advanced language processing
+- **🌐 Streamlit** - Responsive web application framework
+- **🗄️ MongoDB** - Scalable data storage
+- **🔍 ChromaDB** - Efficient vector storage for semantic search
+- **📄 Document Processing** - PyPDF2, python-docx, openpyxl
 
-1.API_KEY=your_ai21_api_key_here
+### Performance Optimizations
 
-2.MONGO_URI=your_mongodb_connection_string
-
-3.CHROMA_API_KEY=your_chromadb_api_key
-
-4.CHROMA_TENANT=your_chromadb_tenant
-
-5.CHROMA_DB=your_chromadb_database_name
-
-**3.Launch the application**
-
-streamlit run main_app.py
-
-**Architecture Overview**
-
-![image alt](https://github.com/rishi991072/Gyan_Chatbot/blob/04f23387204caf8f143e3b1718296bfae7e9963d/Screenshot%20(23).png)
-
-
-
-**Advanced Features**
-
-1.Chat History: Access previous conversations from the sidebar
-
-2.Document Management: View, manage, and delete uploaded files
-
-3.Mode Switching: Seamlessly transition between global and local modes
-
-4.Session Persistence: Your data remains available across sessions
-
-**Technical Implementation****
-
-**Core Technologies**
-
-1.AI21 Studio Jamba Model: Advanced language processing capabilities
-
-2.Streamlit Framework: Responsive web application interface
-
-3.MongoDB: Scalable data storage for users and chat history
-
-4.ChromaDB: Efficient vector storage for semantic search
-
-5.Document Processing Libraries: PyPDF2, python-docx, openpyxl
-
-**Performance Optimization**
-
-1.Efficient Chunking: 800-character optimal document segmentation
+- **⚡ Efficient Chunking** - 800-character optimal document segmentation
 
 2.Smart Vectorization: Semantic embedding for accurate retrieval
 
@@ -127,11 +103,11 @@ streamlit run main_app.py
 
 **UI Images**
 
-![image alt](https://github.com/rishi991072/Gyan_Chatbot/blob/1dd486878a985bedc30e5efca367e451b41fcb59/Screenshot%20(18).png)
+![image alt](https://github.com/rishi991072/Vigyan_Chatbot/blob/1dd486878a985bedc30e5efca367e451b41fcb59/Screenshot%20(18).png)
 
-![image alt](https://github.com/rishi991072/Gyan_Chatbot/blob/f83be4935517df16195edc6fb095f44364a2f28b/Screenshot%20(22).png)
+![image alt](https://github.com/rishi991072/Vigyan_Chatbot/blob/f83be4935517df16195edc6fb095f44364a2f28b/Screenshot%20(22).png)
 
-**Gyan Chatbot - Transforming document interaction through AI intelligence. 🚀**
+**Vigyan Chatbot - Transforming document interaction through AI intelligence. 🚀**
 
 
 

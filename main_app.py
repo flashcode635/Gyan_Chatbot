@@ -20,6 +20,125 @@ if not api_key:
     st.error("Error: API_KEY not found.")
     st.stop()
 
+# Set page configuration with theme settings
+st.set_page_config(
+    page_title="Vigyan Chatbot",
+    page_icon="🤖",
+    layout="wide",
+    initial_sidebar_state="expanded"
+)
+
+# Force light theme with more comprehensive CSS
+st.markdown("""
+    <style>
+    :root {
+        --primary-color: #3b82f6;
+        --background-color: #f8fafc;
+        --text-color: #1e293b;
+        --sidebar-bg: #f1f5f9;
+    }
+    
+    /* Main app container */
+    .stApp {
+        background-color: var(--background-color) !important;
+        color: var(--text-color) !important;
+    }
+    
+    /* Sidebar */
+    [data-testid="stSidebar"] {
+        background-color: var(--sidebar-bg) !important;
+    }
+    
+    /* Tab styling for login/register */
+    .stTabs [data-baseweb="tab-list"] {
+        gap: 0.5rem;
+    }
+    
+    .stTabs [data-baseweb="tab"] {
+        flex: 1;
+        text-align: center;
+        padding: 0.5rem 1rem;
+        border-radius: 0.5rem 0.5rem 0 0;
+        background-color: #f1f5f9;
+        color: #94a3b8;
+        transition: all 0.2s ease;
+        margin: 0;
+        font-weight: 500;
+    }
+    
+    .stTabs [data-baseweb="tab"]:hover {
+        background-color: #e2e8f0;
+        color: #64748b;
+    }
+    
+    .stTabs [aria-selected="true"] {
+        background-color: #3b82f6 !important;
+        color: white !important;
+    }
+    
+    .stTabs [data-baseweb="tab-highlight"] {
+        background-color: transparent !important;
+    }
+    
+    /* Main content area */
+    [data-testid="stAppViewContainer"] {
+        background-color: var(--background-color) !important;
+    }
+    
+    /* Buttons */
+    .stButton>button {
+        border: 1px solid #d1d5db !important;
+        background-color: white !important;
+        color: var(--text-color) !important;
+    }
+    
+    /* Input fields */
+    .stTextInput>div>div>input,
+    .stTextArea>div>div>textarea {
+        background-color: white !important;
+        color: var(--text-color) !important;
+        border: 1px solid #d1d5db !important;
+    }
+    
+    /* Chat bubbles */
+    .chat-bubble-user, .chat-bubble-assistant {
+        color: var(--text-color) !important;
+    }
+    
+    /* Disable dark mode */
+    [data-theme="dark"] {
+        --primary-color: #3b82f6 !important;
+        --background-color: #f8fafc !important;
+        --text-color: #1e293b !important;
+    }
+    </style>
+""", unsafe_allow_html=True)
+
+# Set theme configuration
+st.markdown("""
+    <script>
+    // Force light theme
+    const setTheme = () => {
+        const html = document.querySelector('html');
+        if (html) {
+            html.setAttribute('data-theme', 'light');
+        }
+    };
+    
+    // Run on page load and after any Streamlit updates
+    setTheme();
+    document.addEventListener('DOMContentLoaded', setTheme);
+    
+    // Create a mutation observer to watch for theme changes
+    const observer = new MutationObserver((mutations) => {
+        setTheme();
+    });
+    
+    // Start observing the document with the configured parameters
+    observer.observe(document.documentElement, { attributes: true, childList: true, subtree: true });
+    </script>
+""", unsafe_allow_html=True)
+
 # Initialize AI21 client
 from ai21 import AI21Client
 from ai21.models.chat import ChatMessage
@@ -27,6 +146,7 @@ client = AI21Client(api_key=api_key)
 
 # Initialize MongoDB
 from pymongo import MongoClient
+
 try:
     mongo_client = MongoClient(os.getenv("MONGO_URI"))
     db = mongo_client["intern_data"]
@@ -54,14 +174,6 @@ try:
 except Exception as e:
     st.error(f"ChromaDB Error: {e}")
     st.stop()
-
-# Page configuration
-st.set_page_config(
-    page_title="Gyan Chatbot",
-    page_icon="🤖",
-    layout="wide",
-    initial_sidebar_state="expanded"
-)
 
 def generate_user_id(users_collection):
     """Generate a new user ID"""
@@ -95,10 +207,10 @@ def main():
     col1, col2 = st.columns([1, 5])
     with col1:
         st.markdown("""
-        <div class="logo">GC</div>
+        <div class="logo">VC</div>
         """, unsafe_allow_html=True)
     with col2:
-        st.markdown('<h1 class="main-header">Gyan Chatbot</h1>', unsafe_allow_html=True)
+        st.markdown('<h1 class="main-header">Vigyan Chatbot</h1>', unsafe_allow_html=True)
     
     # Authentication
     if not st.session_state.user_id:
@@ -126,7 +238,7 @@ def main():
         st.markdown("""
         <div style='display: flex; align-items: center; justify-content: center; gap: 0.5rem; margin-bottom: 1.5rem;'>
             <div class="small-logo">GC</div>
-            <h2 style='margin: 0; color: #3b82f6; font-size: 1.5rem;'>Gyan Chatbot</h2>
+            <h2 style='margin: 0; color: #3b82f6; font-size: 1.5rem;'>Vigyan Chatbot</h2>
         </div>
         """, unsafe_allow_html=True)
         
